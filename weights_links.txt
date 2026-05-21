@@ -1,0 +1,20 @@
+Multi-view Pig Posture Recognition - Trained Model Weights
+========================================================
+
+These weights are required for full verification and reproducibility of the ensemble submission.
+
+Model A: EVA02-Large (K-Fold CV)
+---------------------------------
+https://drive.google.com/file/d/180FCfqLqC5gn_4tp7c53NMTvc_P3Sk9t/view?usp=sharing
+
+Model B: EVA02-Enormous (Multi-Seed)
+------------------------------------
+Seed 42 Checkpoint: https://www.kaggle.com/models/yashverdhan0/evaenormous-seed42/
+Seed 62 Checkpoint: https://www.kaggle.com/models/yashverdhan0/evaenormousseed62/
+Seed 82 Checkpoint: https://www.kaggle.com/models/yashverdhan0/evaenormousseed-82/
+Seed 120 Checkpoint: https://www.kaggle.com/models/yashverdhan0/evaenormousseed-120/
+
+Pretrained Backbones
+
+EVA02-Large Pretrained: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+EVA02-Enormous Pretrained: eva02_enormous_patch14_clip_224.laion2b_plus
