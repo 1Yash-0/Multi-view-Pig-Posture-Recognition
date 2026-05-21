@@ -126,7 +126,7 @@ Three fold outputs arithmetically averaged → `eva_large_5_fold_ensemble_probs.
 
 ## Model B — EVA02-Enormous (Multi-Seed)
 
-**File:** `train_eva02_enormous_lpft.ipynb`
+**File:** `EVA02_Enormous_Train_Infer.ipynb`
 
 | Setting | Value |
 |---|---|
@@ -207,14 +207,16 @@ We tested arithmetic mean, geometric mean at various weight ratios, and rank ave
 
 ```
 .
-├── EVA02_Large_KFold.ipynb           # Model A: Large training (K-Fold CV)
-├── train_eva02_enormous_lpft.ipynb   # Model B: Enormous training (LP-FT)
-├── ensemble_enormous_seeds.py        # 4-seed ensemble inference + TTA
-├── infer_eva02_enormous_lpft.py      # Single-seed inference + dashboard
-└── README.md
+├── EVA02_Enormous_Train_Infer.ipynb    # Model B: Enormous training (LP-FT) + Inference
+├── EVA02_Large_KFold.ipynb             # Model A: Large training (K-Fold CV)
+├── README.md                           # Documentation
+├── ensemble_enormous_seeds.ipynb       # 4-seed ensemble inference + TTA
+├── ensemble_large_enormous.py          # Final geometric mean ensemble script
+├── inference_and_ensembling_related.md # Additional inference documentation
+└── weights_links.txt                   # Links to model checkpoints
 ```
 
-> **Model weights** are hosted on Google Drive (too large for GitHub): _[INSERT LINK]_
+> **Model weights** are hosted on Google Drive (too large for GitHub). See `weights_links.txt` for the links.
 
 ---
 
@@ -224,13 +226,13 @@ We tested arithmetic mean, geometric mean at various weight ratios, and rank ave
 
 ```bash
 # 1. Run Enormous inference for each seed
-#    Edit seed_checkpoints paths in ensemble_enormous_seeds.py
-python ensemble_enormous_seeds.py
+#    Edit seed_checkpoints paths in ensemble_enormous_seeds.ipynb and run all cells
 
 # 2. Large fold probs are generated at the end of EVA02_Large_KFold.ipynb
 #    Saved as: eva02_large_fold{0,2,3}_test_probs.npy
 
 # 3. Average Large folds + average Enormous seeds → geometric mean 35/65
+#    Run: python ensemble_large_enormous.py
 ```
 
 ### From scratch
