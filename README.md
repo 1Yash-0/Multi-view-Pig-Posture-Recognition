@@ -17,7 +17,7 @@
 Classify cropped pig images into **5 postures** across multiple camera views:
 `Lateral Lying Left` · `Lateral Lying Right` · `Sitting` · `Standing` · `Sternal Lying`
 
-**Team:** Yash Verdhan, Aditya Singh Sengar
+**Team:** Yash Verdhan, Aditya Singh Senger
 
 ---
 
